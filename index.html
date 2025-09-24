@@ -9,26 +9,57 @@
 </head>
 
 <body>
-
     <!-- Navbar -->
     <header class="navbar">
         <div class="logo">
-            <img src="images/logo.png" alt="Mac Island Construction Logo">
+            <img src="asset/images/logo.png" alt="Mac Island Construction Logo">
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="#">Expertise</a></li>
+                <li class="dropdown">
+                    <a href="#">Expertise <span class="arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"class="about-link">↗ General Contractors</a></li>
+                            <li><a href="#"class="about-link">↗ Commercial Construction</a></li>
+                            <li><a href="#"class="about-link">↗ Multi-Family Construction & Renovation</a></li>
+                            <li><a href="#"class="about-link">↗ Construction Managers</a></li>
+                            <li><a href="#"class="about-link">↗ Design Build</a></li>
+                        </ul>
+                    </a>
+                </li>
                 <li><a href="#">Projects</a></li>
-                <li><a href="#">Our Company</a></li>
-                <li><a href="#">Contact</a></li>
+                <li>
+                    <a href="#"><!-- Our Company Dropdown -->
+                        <li class="dropdown">
+                            <a href="#">Our Company <span class="arrow">▼</span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" class="about-link">↗ About</a></li>
+                                    <li><a href="#"class="about-link">↗ Team</a></li>
+                                    <li><a href="#"class="about-link">↗ Our Company Impact</a></li>
+                                    <li><a href="#"class="about-link">↗ Health & Safety</a></li>
+                                    <li><a href="#"class="about-link">↗ Careers</a></li>
+                                    <li><a href="#"class="about-link">↗ News & Awards</a></li>
+                                </ul>
+                            </li>
+                        </li>
+                    </a>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
             </ul>
         </nav>
-        <a href="#" class="btn">Book a Consultation</a>
+        <div class="bookingBtm">
+            <a href="#" class="btn">Book a Consultation</a>
+        </div>
+        <div class="hamburger" id="hamburger">☰</div>
     </header>
     <!-- Hero Section -->
     <section class="hero">
+        <div class="heroImage">
+            <img src="asset/images/SectionOneBC.png" alt="">
+        </div>
         <video autoplay muted loop playsinline class="hero-video">
-            <source src="video/heroVideo.mp4" type="video/mp4">
+            <source src="asset/video/heroVideo.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="overlay-text">MAC ISLAND</div>
@@ -59,7 +90,7 @@
                 </p>
 
                 <a href="#" class="about-link">
-                    <span>ABOUT US</span> <span class="arrow">↗</span>
+                    <span>ABOUT US<span class="arrow">↗</span>
                 </a>
             </div>
         </div>
@@ -68,7 +99,7 @@
     <!-- Third Section -->
     <section class="experience">
         <video autoplay muted loop playsinline class="experience-video">
-            <source src="video/experienceVideo.mp4" type="video/mp4">
+            <source src="asset/video/experienceVideo.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
 
@@ -82,18 +113,64 @@
                 <div class="experience-grid">
                     <!-- Left Side: Image -->
                     <div class="experience-image">
-                        <img src="images/serviceSectionImg1.png" alt="Construction Image">
+                        <img id="exp-photo" src="asset/images/serviceSectionImg1.png" alt="General Contracting preview">
                     </div>
+
                     <!-- Right Side: Services -->
                     <div class="experience-services">
-                        <ul>
-                            <li><a href="#">General Contracting <span>↗</span></a></li>
-                            <li><a href="#">Commercial Construction <span>↗</span></a></li>
-                            <li><a href="#">Multi-Family Construction & Renovation <span>↗</span></a></li>
-                            <li><a href="#">Construction Management <span>↗</span></a></li>
-                            <li><a href="#">Design-Build <span>↗</span></a></li>
+                        <ul class="service-list">
+                            <li class="service-item" data-image="asset/images/serviceSectionImg1.png">
+                                <button type="button" class="service-link">
+                                    <span>General Contracting</span><span aria-hidden="true">↗</span>
+                                </button>
+                                <div class="service-detail">
+                                    <p>Full-scope management with no loose ends and no guessing games.</p>
+                                </div>
+                            </li>
+
+                            <li class="service-item" data-image="asset/images/serviceSectionImg2.png">
+                                <button type="button" class="service-link">
+                                    <span>Commercial Construction</span><span aria-hidden="true">↗</span>
+                                </button>
+                                <div class="service-detail">
+                                    <p>Built for businesses, institutions, and industries that can’t afford downtime.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li class="service-item" data-image="asset/images/serviceSectionImg3.png">
+                                <button type="button" class="service-link">
+                                    <span>Multi-Family Construction &amp; Renovation</span><span
+                                        aria-hidden="true">↗</span>
+                                </button>
+                                <div class="service-detail">
+                                    <p>Safe, strategic, & tenant-conscious construction whether it’s a new build or
+                                        renovation.</p>
+                                </div>
+                            </li>
+
+                            <li class="service-item" data-image="asset/images/serviceSectionImg4.png">
+                                <button type="button" class="service-link">
+                                    <span>Construction Management</span><span aria-hidden="true">↗</span>
+                                </button>
+                                <div class="service-detail">
+                                    <p>Planning, coordination, and control from seasoned pros who don’t flinch under
+                                        pressure.</p>
+                                </div>
+                            </li>
+
+                            <li class="service-item" data-image="asset/images/serviceSectionImg5.png">
+                                <button type="button" class="service-link">
+                                    <span>Design-Build</span><span aria-hidden="true">↗</span>
+                                </button>
+                                <div class="service-detail">
+                                    <p>One team, one contract, total accountability. We design, manage, and build from
+                                        start to finish.</p>
+                                </div>
+                            </li>
                         </ul>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -111,101 +188,100 @@
             </a>
         </div>
     </section>
-</body>
-<footer class="site-footer">
-    <div class="container footer-top">
-        <!-- LEFT: Contact / Social / CTA / Nav -->
-        <div class="footer-left">
-            <div class="footer-columns">
-                <div class="contact">
-                    <h4>Get in touch</h4>
-                    <ul class="contact-list">
-                        <li><span class="k">P</span> <a href="tel:2503846091">250.384.6091</a></li>
-                        <li><span class="k">E</span> <a href="mailto:info@macisle.com">info@macisle.com</a></li>
-                        <li><span class="k">A</span> 5285 West Saanich Road</li>
-                    </ul>
-                </div>
-
-                <div class="follow">
-                    <h4>Follow us</h4>
-                    <div class="socials">
-                        <a href="#" aria-label="Facebook" class="ico">
-                            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
-                                <path
-                                    d="M22 12.06C22 6.48 17.52 2 11.94 2 6.36 2 1.88 6.48 1.88 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.9h2.42V9.53c0-2.39 1.42-3.71 3.6-3.71 1.04 0 2.14.19 2.14.19v2.36h-1.2c-1.19 0-1.56.74-1.56 1.49v1.79h2.65l-.42 2.9h-2.23V22c4.78-.76 8.44-4.92 8.44-9.94Z" />
-                            </svg>
-                        </a>
-                        <a href="#" aria-label="Instagram" class="ico">
-                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <rect x="3" y="3" width="18" height="18" rx="5" />
-                                <circle cx="12" cy="12" r="3.5" />
-                                <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none" />
-                            </svg>
-                        </a>
-                        <a href="#" aria-label="LinkedIn" class="ico">
-                            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
-                                <path
-                                    d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3.5 8.98h2.96V20.5H3.5V8.98Zm6.06 0h2.83v1.58h.04c.39-.74 1.35-1.52 2.79-1.52 2.98 0 3.53 1.97 3.53 4.53v6.93h-2.96v-6.15c0-1.47-.03-3.36-2.05-3.36-2.06 0-2.38 1.6-2.38 3.25v6.26H9.56V8.98Z" />
-                            </svg>
-                        </a>
+    <footer class="site-footer">
+        <div class="container footer-top">
+            <!-- LEFT: Contact / Social / CTA / Nav -->
+            <div class="footer-left">
+                <div class="footer-columns">
+                    <div class="contact">
+                        <h4>Get in touch</h4>
+                        <ul class="contact-list">
+                            <li><span class="k">P</span> <a href="tel:2503846091">250.384.6091</a></li>
+                            <li><span class="k">E</span> <a href="mailto:info@macisle.com">info@macisle.com</a></li>
+                            <li><span class="k">A</span> 5285 West Saanich Road</li>
+                        </ul>
                     </div>
 
-                    <a href="#" class="btn-cta">
-                        <span class="arrow">
-                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="7" y1="17" x2="17" y2="7"></line>
-                                <polyline points="9 7 17 7 17 15"></polyline>
-                            </svg>
-                        </span>
-                        Book a consultation
-                    </a>
+                    <div class="follow">
+                        <h4>Follow us</h4>
+                        <div class="socials">
+                            <a href="#" aria-label="Facebook" class="ico">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                                    <path
+                                        d="M22 12.06C22 6.48 17.52 2 11.94 2 6.36 2 1.88 6.48 1.88 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.9h2.42V9.53c0-2.39 1.42-3.71 3.6-3.71 1.04 0 2.14.19 2.14.19v2.36h-1.2c-1.19 0-1.56.74-1.56 1.49v1.79h2.65l-.42 2.9h-2.23V22c4.78-.76 8.44-4.92 8.44-9.94Z" />
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="Instagram" class="ico">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="5" />
+                                    <circle cx="12" cy="12" r="3.5" />
+                                    <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none" />
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="LinkedIn" class="ico">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                                    <path
+                                        d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3.5 8.98h2.96V20.5H3.5V8.98Zm6.06 0h2.83v1.58h.04c.39-.74 1.35-1.52 2.79-1.52 2.98 0 3.53 1.97 3.53 4.53v6.93h-2.96v-6.15c0-1.47-.03-3.36-2.05-3.36-2.06 0-2.38 1.6-2.38 3.25v6.26H9.56V8.98Z" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <a href="#" class="btn-cta">
+                            <span class="arrow">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="9 7 17 7 17 15"></polyline>
+                                </svg>
+                            </span>
+                            Book a consultation
+                        </a>
+                    </div>
+                </div>
+
+                <hr class="soft-divider">
+
+                <div class="footer-nav">
+                    <h5>Navigate</h5>
+
+                    <nav class="nav-columns">
+                        <ul>
+                            <li><a href="#"><span>↗</span> General Contractors</a></li>
+                            <li><a href="#"><span>↗</span> Commercial Construction</a></li>
+                            <li><a href="#"><span>↗</span> Multi-Family Construction &amp; Renovation</a></li>
+                            <li><a href="#"><span>↗</span> Construction Managers</a></li>
+                            <li><a href="#"><span>↗</span> Design Build</a></li>
+                            <li><a href="#"><span>↗</span> Projects</a></li>
+                        </ul>
+
+                        <ul>
+                            <li><a href="#"><span>↗</span> About</a></li>
+                            <li><a href="#"><span>↗</span> Team</a></li>
+                            <li><a href="#"><span>↗</span> Our Community Impact</a></li>
+                            <li><a href="#"><span>↗</span> Health &amp; Safety</a></li>
+                            <li><a href="#"><span>↗</span> Careers</a></li>
+                            <li><a href="#"><span>↗</span> News &amp; Awards</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
 
-            <hr class="soft-divider">
+            <!-- RIGHT: Accredited logos -->
+            <div class="footer-right">
+                <h4>Accredited Logos</h4>
+                <div class="logo-grid">
+                    <!-- Replace placeholders with real grayscale logos -->
+                    <img src="asset/images/footerLogo1.png" alt="BBB Accredited">
+                    <img src="asset/images/footerLogo2.png" alt="Travelers">
+                    <img src="asset/images/footerLogo3.png" alt="Pennmarq">
+                    <img src="asset/images/footerLogo4.png" alt="BCCSA">
+                    <img src="asset/images/footerLogo5.png" alt="CAR Certified">
+                    <img src="asset/images/footerLogo6.png" alt="CHBA">
+                    <img src="asset/images/footerLogo7.png" alt="Leaf">
 
-            <div class="footer-nav">
-                <h5>Navigate</h5>
-
-                <nav class="nav-columns">
-                    <ul>
-                        <li><a href="#"><span>↗</span> General Contractors</a></li>
-                        <li><a href="#"><span>↗</span> Commercial Construction</a></li>
-                        <li><a href="#"><span>↗</span> Multi-Family Construction &amp; Renovation</a></li>
-                        <li><a href="#"><span>↗</span> Construction Managers</a></li>
-                        <li><a href="#"><span>↗</span> Design Build</a></li>
-                        <li><a href="#"><span>↗</span> Projects</a></li>
-                    </ul>
-
-                    <ul>
-                        <li><a href="#"><span>↗</span> About</a></li>
-                        <li><a href="#"><span>↗</span> Team</a></li>
-                        <li><a href="#"><span>↗</span> Our Community Impact</a></li>
-                        <li><a href="#"><span>↗</span> Health &amp; Safety</a></li>
-                        <li><a href="#"><span>↗</span> Careers</a></li>
-                        <li><a href="#"><span>↗</span> News &amp; Awards</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-
-        <!-- RIGHT: Accredited logos -->
-        <div class="footer-right">
-            <h4>Accredited Logos</h4>
-            <div class="logo-grid">
-                <!-- Replace placeholders with real grayscale logos -->
-                <img src="images/footerLogo1.png" alt="BBB Accredited">
-                <img src="images/footerLogo2.png" alt="Travelers">
-                <img src="images/footerLogo3.png" alt="Pennmarq">
-                <img src="images/footerLogo4.png" alt="BCCSA">
-                <img src="images/footerLogo5.png" alt="CAR Certified">
-                <img src="images/footerLogo6.png" alt="CHBA">
-                <img src="images/footerLogo7.png" alt="Leaf">
-                
-            </div>
-            <div class="container footer-bottom">
+                </div>
+                <div class="container footer-bottom">
                     <p class="legal">
                         This site is protected by reCAPTCHA and the <a href="#">Google Privacy Policy</a> and <a
                             href="#">Terms
@@ -215,10 +291,12 @@
                         Copyright © 2025 All Rights Reserved. Designed &amp; Developed by <a href="#">Array</a>.
                     </p>
                 </div>
+            </div>
         </div>
-    </div>
 
 
-</footer>
+    </footer>
+    <script src="js/service.js"></script> <!-- or inline script -->
+</body>
 
 </html>
